@@ -4,11 +4,11 @@ const mobileMenu = document.getElementById('mobile-menu');
 const overlay = document.getElementById('overlay')
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('-x-translate-x-full');
+    mobileMenu.classList.toggle('-translate-x-full');
     overlay.classList.toggle('hidden')
 });
 overlay.addEventListener('click',()=>{
-    mobileMenu.classList.add('-x-translate-x-full');
+    mobileMenu.classList.add('-translate-x-full');
     overlay.classList.add('hidden')
 })
 // Quantity controls
