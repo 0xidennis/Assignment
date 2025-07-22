@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="icon" href="favicon.png" type="image.png"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Index.js" defer></script>
+</head>
+<body class="bg-white">
+    <header class="border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2">
+                    <img src="/Assets/icon-menu.svg" alt="">
+                </button>
+
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="/Assets/logo.svg" alt="">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-8 ml-12">
+                    <a href="#" class="text-gray-600 hover:text-black transition-colors">Collections</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition-colors">Men</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition-colors">Women</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition-colors">About</a>
+                    <a href="#" class="text-gray-600 hover:text-black transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right side icons -->
+                <div class="flex items-center space-x-4">
+                    <button class="relative p-2">
+                       <img src="/Assets/icon-cart.svg" alt="">
+                        <span id="cart-count" class="absolute -top-1 -right-1 bg-orange-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </button>
+                    <div class="w-8 h-8 lg:w-10 lg:h-10 rounded-full overflow-hidden">
+                        <img src="/Assets/image-avatar.png" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#" class="block text-gray-600 hover:text-black transition-colors">Collections</a>
+                <a href="#" class="block text-gray-600 hover:text-black transition-colors">Men</a>
+                <a href="#" class="block text-gray-600 hover:text-black transition-colors">Women</a>
+                <a href="#" class="block text-gray-600 hover:text-black transition-colors">About</a>
+                <a href="#" class="block text-gray-600 hover:text-black transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+            <!-- Product Images -->
+            <div class="mb-8 lg:mb-0">
+                <!-- Main Image -->
+                <div class="relative mb-4 lg:mb-8">
+                    <div class="aspect-square bg-gradient-to-br from-orange-400 to-orange-300 rounded-2xl overflow-hidden relative">
+                        <img id="main-image" src="/Assets/image-product-1.jpg" alt="Fall Limited Edition Sneakers" class="w-full h-full object-cover">
+                        
+                        <!-- Mobile Navigation Arrows -->
+                        <button id="prev-btn" class="lg:hidden absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg">
+                            <img src="/Assets/icon-previous.svg" alt="">
+                        </button>
+                        <button id="next-btn" class="lg:hidden absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg">
+                           <img src="/Assets/icon-next.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Thumbnail Images -->
+                <div class="hidden lg:grid grid-cols-4 gap-4">
+                    <button class="thumbnail-btn aspect-square bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl overflow-hidden border-2 border-orange-primary" data-image="/placeholder.svg?height=500&width=500">
+                        <img src="/Assets/image-product-1-thumbnail.jpg" alt="Thumbnail 1" class="w-full h-full object-cover">
+                    </button>
+                    <button class="thumbnail-btn aspect-square bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl overflow-hidden border-2 border-transparent hover:border-orange-primary" data-image="/placeholder.svg?height=500&width=500">
+                        <img src="/Assets/image-product-2-thumbnail.jpg" alt="Thumbnail 2" class="w-full h-full object-cover">
+                    </button>
+                    <button class="thumbnail-btn aspect-square bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl overflow-hidden border-2 border-transparent hover:border-orange-primary" data-image="/placeholder.svg?height=500&width=500">
+                        <img src="/Assets/image-product-3-thumbnail.jpg" alt="Thumbnail 3" class="w-full h-full object-cover">
+                    </button>
+                    <button class="thumbnail-btn aspect-square bg-gradient-to-br from-orange-400 to-orange-300 rounded-xl overflow-hidden border-2 border-transparent hover:border-orange-primary" data-image="/placeholder.svg?height=500&width=500">
+                        <img src="/Assets/image-product-4-thumbnail.jpg" alt="Thumbnail 4" class="w-full h-full object-cover">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="lg:pl-8">
+                <div class="mb-4">
+                    <p class="text-orange-primary font-bold text-sm tracking-widest uppercase mb-4">Sneaker Company</p>
+                    <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Fall Limited Edition Sneakers</h1>
+                    <p class="text-gray-600 text-base lg:text-lg leading-relaxed mb-8">
+                        These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.
+                    </p>
+                </div>
+
+                <!-- Pricing -->
+                <div class="mb-8">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <span class="text-3xl font-bold text-gray-900">$125.00</span>
+                        <span class="bg-black text-white px-2 py-1 rounded text-sm font-bold">50%</span>
+                    </div>
+                    <p class="text-gray-500 line-through text-lg">$250.00</p>
+                </div>
+
+                <!-- Add to Cart Section -->
+                <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-4 space-y-4 lg:space-y-0">
+                    <!-- Quantity Selector -->
+                    <div class="flex items-center bg-gray-100 rounded-lg p-2 lg:w-40">
+                        <button id="decrease-qty" class="p-2 text-orange-primary hover:bg-orange-pale rounded">
+                            <img src="/Assets/icon-minus.svg" alt="">
+                        </button>
+                        <span id="quantity" class="flex-1 text-center font-bold text-lg">0</span>
+                        <button id="increase-qty" class="p-2 text-orange-primary hover:bg-orange-pale rounded">
+                            <img src="/Assets/icon-plus.svg" alt="">
+                        </button>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button id="add-to-cart" class="flex-1 bg-orange-primary hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-2 transition-colors">
+                       <img src="/Assets/icon-cart.svg" alt="">
+                        <span>Add to cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
