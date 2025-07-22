@@ -1,11 +1,16 @@
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const overlay = document.getElementById('overlay')
 
 mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('-x-translate-x-full');
+    overlay.classList.toggle('hidden')
 });
-
+overlay.addEventListener('click',()=>{
+    mobileMenu.classList.add('-x-translate-x-full');
+    overlay.classList.add('hidden')
+})
 // Quantity controls
 let quantity = 0;
 const quantitySpan = document.getElementById('quantity');
